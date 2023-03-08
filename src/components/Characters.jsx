@@ -2,7 +2,7 @@ import React from "react";
 import Character from "./Character";
 
 const Characters = (props) => {
-  const { characters, onLikeToggle, onDelete } = props;
+  const { characters, onLikeToggle, onDelete, addToFavourites } = props;
 
   return characters.map((item) => {
     return (
@@ -15,6 +15,8 @@ const Characters = (props) => {
           charcterDirection={item.characterDirection}
           onLikeToggle={onLikeToggle}
           onDelete={onDelete}
+          added={item.added}
+          addToFavourites={addToFavourites}
         />
       </div>
     );

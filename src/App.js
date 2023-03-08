@@ -111,8 +111,9 @@ const App = () => {
     <>
       <div>
         <h3>Total characters liked: {total}</h3>
-        <h3>Favourite characters:</h3>
-        <ul></ul>
+        <h3>
+          Favourite characters: <li>{favourites}</li>
+        </h3>
         <button onClick={getApiData}>Get new data</button>
         <label htmlFor="filter">Filter: </label>
         <input id="filter" type="text" onInput={onInput} />
@@ -126,6 +127,7 @@ const App = () => {
         characters={filtered}
         onLikeToggle={onLikeToggle}
         onDelete={onDelete}
+        addToFavourites={addToFavourites}
       />
     </>
   );

@@ -12,6 +12,8 @@ const Character = (props) => {
     characterDirection,
     onLikeToggle,
     liked,
+    addToFavourites,
+    added,
   } = props;
 
   if (characterDirection === "Left") {
@@ -23,6 +25,8 @@ const Character = (props) => {
           onLikeToggle={onLikeToggle}
           onDelete={onDelete}
           quote={quote}
+          added={added}
+          addToFavourites={addToFavourites}
         />
         <Image image={image} name={name} />
         <Quote quote={quote} />
@@ -38,6 +42,8 @@ const Character = (props) => {
         onLikeToggle={onLikeToggle}
         onDelete={onDelete}
         quote={quote}
+        added={added}
+        addToFavourites={addToFavourites}
       />
       <Quote quote={quote} />
       <Image image={image} name={name} />
